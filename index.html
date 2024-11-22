@@ -10,14 +10,17 @@
 
 <header>
 
-   <img src="img/LOGO_certo-removebg-preview.png" alt="">
+   
     <nav class="navigation">
+        <img src="img/LOGO_certo-removebg-preview.png" alt="">
+
         <a href="#home" class="nav-links">Home</a>
         <a href="#who-am-i" class="nav-links">About</a>
         <a href="#my-projects" class="nav-links">Services</a>
         <a href="#contact" class="nav-links">Contato</a>
         <button class="btnLogin-popup" onclick="toggleModal()">Login</button>
     </nav>
+    
 </header>
 
 <main>
@@ -25,38 +28,66 @@
         <div class="Sobre">
             <h1>Olá! somos a <br> <strong>Oasis</strong></h1>
             <p>Venha conhecer nosso <strong>Sistema</strong></p>
-            <button class="button" href="https://www.youtube.com">Saber mais</button>
+            <button class="button" href="https://www.youtube.com">Cadastrar-se</button>
+        </div>
+        <div class="box-img-main">
+            <img class="img-profile" src="./img/istockphoto-1365436734-612x612.webp" alt="">
         </div>
            
-            <div class="box-img-main">
-                <img class="img-profile" src="./img/IMG-20231115-WA0009.jpg" alt="Perfil Matheus Gomes">
-            </div>
         
             
     </section>
 
     <section id="experiences" class="second-section">
         <h2 class="title">Experiências</h2>
-        <div class="carousel">
-            <div class="carousel-item active">
-                <img src="./img/istockphoto-1365436734-612x612.webp" alt="Imagem 1">
+        <div class="slider">
+
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--Fim da radio buttons-->
+
+            <!--Slide images-->
+            <div class="slide first">
+                <img src="img/istockphoto-1365436734-612x612.webp" alt="Imagem 1" />
             </div>
-            <div class="carousel-item">
-                <img src="./img/IMG-20231115-WA0011.jpg" alt="Imagem 2">
+            <div class="slide">
+                <img src="img/fundo.jpg" alt="Imagem 2" />
             </div>
-            <div class="carousel-item">
-                <img src="./img/IMG-20231115-WA0012.jpg" alt="Imagem 3">
+            <div class="slide">
+                <img src="img/istockphoto-1365436734-612x612.webp" alt="Imagem 3" />
             </div>
-            <button class="carousel-control prev" onclick="changeSlide(-1)">❮</button>
-            <button class="carousel-control next" onclick="changeSlide(1)">❯</button>
-        </div>
+            <div class="slide">
+                <img src="img/istockphoto-1365436734-612x612.webp" alt="Imagem 4" />
+            </div>
+<!--Fim Slide images-->
+
+<!--Navigation auto-->
+ <div class="navigation-auto">
+    <div class="auto-btn1"></div>
+    <div class="auto-btn2"></div>
+    <div class="auto-btn3"></div>
+    <div class="auto-btn4"></div>
+ </div>
+</div>
+<div class="manual-navigation">
+    <label for="radio1" class="manual-btn"></label>
+    <label for="radio2" class="manual-btn"></label>
+    <label for="radio3" class="manual-btn"></label>
+    <label for="radio4" class="manual-btn"></label>
+</div>
+
+    </div>
+
     </section>
 
     <section id="who-am-i" class="third-section">
         <h2 class="title">Quem somos ?</h2>
         <div>
             <img class="img-who-am-i" src="./img/IMG-20231115-WA0010.jpg" alt="imagem do matheus gomes">
-            <p>A <strong>The Collector</strong> surgiu como uma ideia de termos um <strong>site</strong> para nosso <strong>Game</strong>, Para ampliar a <strong>Amplitude</strong> de nossas vendas, E assim surgiu nosso <strong>site oficial.</strong></p>
+            <p>A <strong>Oasis</strong> surgiu como uma ideia de termos um <strong>Sistema</strong> que possa <strong>Ajudar</strong> as <strong>Assistentes Sociais</strong> </p>
         </div>
     </section>
 

@@ -71,16 +71,11 @@ header{
     flex-wrap: wrap;
     padding: .8rem;
     background-color: rgb(0, 117, 102);
-    min-height: 30px;
+    min-height: 20px;
 
     
     }
-    img{
     
-       max-height: 10rem; 
-     
-       
-    }
     
     nav{ /*Parte dos link/botões Experiências, Quem sou eu ?, Meus Projetos, Contato*/
     display: flex;
@@ -179,10 +174,10 @@ header{
     }
     .box-img-main{
     
-      align-items: flex-end;
+  
       text-align: end;
-        padding: 1rem;
-        display: flex; 
+       
+       
         justify-content: flex-end;
 
     
@@ -190,7 +185,7 @@ header{
     }
     .img-profile{
         width: 100%;
-        border-radius: 50%;
+        
        float: right;
        justify-content: flex-end;
     }
@@ -202,44 +197,6 @@ header{
         align-items: center;
         justify-content: center;
         padding: 4rem;
-    }
-    
-    .carousel {
-        position: relative;
-        width: 100%;
-        max-width: 600px; /* Limita a largura do carrossel */
-        overflow: hidden; /* Oculta itens fora da área visível */
-    }
-    
-    .carousel-item {
-        display: none; /* Oculta todos os itens por padrão */
-    }
-    
-    .carousel-item.active {
-        display: block; /* Exibe apenas o item ativo */
-    }
-    
-    .carousel img {
-        width: 100%; /* A imagem ocupa toda a largura do carrossel */
-        border-radius: 10px; /* Bordas arredondadas para as imagens */
-    }
-    
-    .carousel-control {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(255, 255, 255, 0.7);
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
-    
-    .carousel-control.prev {
-        left: 10px; /* Botão anterior à esquerda */
-    }
-    
-    .carousel-control.next {
-        right: 10px; /* Botão seguinte à direita */
     }
     .second-section ul{
     list-style: none;
@@ -285,6 +242,89 @@ header{
         transition: .4s;
         cursor: default;
      }
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+.slides{
+    width: 400px;
+    height: 400px;
+    display: flex;
+}
+.slides input {
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+}
+.slide img{
+    width: 800px;
+}
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #fff;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+.navigation-auto div{
+    border: 2px solid #20a6f1;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
      .third-section{ /*Terceira seção da pagina/quem sou eu? e imagem */
     
         display: flex;
