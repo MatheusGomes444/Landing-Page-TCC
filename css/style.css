@@ -22,7 +22,7 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 99;
-    height: 10rem;
+    
  
     
 }
@@ -60,7 +60,6 @@ header{
         background-size: 400%;
     height: 100vh;
     
-
     
     }
     header{ /* Parte de cima do site, botões Experiências, Quem sou eu ?, Meus Projetos, Contato*/
@@ -72,10 +71,19 @@ header{
     padding: .8rem;
     background-color: rgb(0, 117, 102);
     min-height: 20px;
-
     
     }
+    .box-img-header{ /*Parte da logo*/
+        
+    height: 10%;
+    width: 1rem;
     
+    }
+    .img-logo{
+    max-height: 10%;
+        max-width: 15px;
+        
+    }
     
     nav{ /*Parte dos link/botões Experiências, Quem sou eu ?, Meus Projetos, Contato*/
     display: flex;
@@ -83,14 +91,12 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 18px;
     
     }
     .nav-links{
     
     text-decoration: none;
     color: var(--white);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     
     
     }
@@ -99,7 +105,6 @@ header{
     color: var(--dark4);
     transition: .4s;
     text-decoration: underline;
-    
     
     }
     button {
@@ -113,7 +118,6 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
       }
       
       button:hover {
@@ -133,6 +137,7 @@ header{
     padding: 4rem;
     
     }
+    
     .first-section{ /*Primeira seção da pagina, apresentação e a logo*/
     
     display: flex;
@@ -174,18 +179,21 @@ header{
     }
     .box-img-main{
     
-  
+      align-items: flex-end;
       text-align: end;
-       
-       
+        padding: 1rem;
+        display: flex; 
         justify-content: flex-end;
 
     
 
     }
+    img{
+        max-width: 5rem;
+    }
     .img-profile{
-        width: 100%;
-        
+  max-width: 30rem;
+     height: 300px;
        float: right;
        justify-content: flex-end;
     }
@@ -198,19 +206,8 @@ header{
         justify-content: center;
         padding: 4rem;
     }
-    .second-section ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-    }
-    .second-section ul li:hover{ /*Quando passar o mouse por cima acontece alguma coisa*/ 
-    color: var(--dark5);
-    transition: .4s;
-    cursor: default;
-    }
+ 
+
     title{
     
     color: var(--dark5);
@@ -229,12 +226,7 @@ header{
         gap: 2rem;
         
         }
-    .second-section p{
-    color: var(--dark4);
-    font-weight: bold;
-    letter-spacing: 2px;
     
-        }
      .second-section p:hover{ /*Quando passar o mouse por cima acontece alguma coisa*/ 
     
     
@@ -242,89 +234,7 @@ header{
         transition: .4s;
         cursor: default;
      }
-.slider{
-    margin: 0 auto;
-    width: 800px;
-    height: 400px;
-    overflow: hidden;
-}
-.slides{
-    width: 400px;
-    height: 400px;
-    display: flex;
-}
-.slides input {
-    display: none;
-}
-.slide{
-    width: 25%;
-    position: relative;
-}
-.slide img{
-    width: 800px;
-}
-.manual-navigation{
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-.manual-btn{
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.manual-btn:not(:last-child){
-    margin-right: 40px;
-}
-.manual-btn:hover{
-    background-color: #fff;
-}
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-#radio2:checked ~ .first{
-    margin-left: -25%;
-}
-#radio3:checked ~ .first{
-    margin-left: -50%;
-}
-#radio4:checked ~ .first{
-    margin-left: -75%;
-}
-.navigation-auto div{
-    border: 2px solid #20a6f1;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.navigation-auto{
-    position: absolute;
-    width: 800px;
-    margin-top: 360px;
-    display: flex;
-    justify-content: center;
-}
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #fff;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #fff;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #fff;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #fff;
-}
-
+     
      .third-section{ /*Terceira seção da pagina/quem sou eu? e imagem */
     
         display: flex;
@@ -343,8 +253,9 @@ header{
      }
      .third-section > div img{
     
-        width: 250px;
-        border-radius: 10px;
+        width: 100px;
+        height: 200px;
+        border-radius: 100px;
      }
      .third-section > div p{
     
@@ -369,6 +280,7 @@ header{
     
     
      }
+    
     footer{ /*Parte de baixo/ contatos*/
     
     gap: 2rem;
@@ -385,7 +297,7 @@ header{
     
     }
 .logo{
-    font-size: 1em;
+    font-size: 2em;
     color: #fff;
     user-select: none;
 
@@ -470,9 +382,12 @@ header{
 .icon-close {
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
+    top: 114px;
+    right: 435px;
+    font-size: 1.9em;
+   
+    color: black;
+   
 }
 
 .caixa-box h2{

@@ -4,6 +4,7 @@ const registrolink = document.querySelector('.registro-link');
 const btnLoginpopup = document.querySelector('.btnLogin-popup');
 const iconClose = document.querySelector('.icon-close');
 const items = document.querySelectorAll('.carousel-item');
+
 function toggleModal() {
     const wrapper = document.querySelector('.wrapper');
     wrapper.classList.toggle('active');
