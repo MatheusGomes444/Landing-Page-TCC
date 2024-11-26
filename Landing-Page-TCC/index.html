@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+
+   
+    <nav class="navigation">
+        <img src="img/LOGO_certo-removebg-preview.png" alt="">
+
+        <a href="#home" class="nav-links">Home</a>
+        <a href="#who-am-i" class="nav-links">About</a>
+        <a href="#contact" class="nav-links">Contato</a>
+        <button class="btnLogin-popup" onclick="toggleModal()">Login</button>
+    </nav>
+    
+</header>
+
+<main>
+    <section id="home" class="first-section">
+        <div class="Sobre">
+            <h1>Olá! somos a <br> <strong>Oasis</strong></h1>
+            <p>Venha conhecer nosso <strong>Sistema</strong></p>
+            <button class="button" href="https://www.youtube.com">Cadastrar-se</button>
+        </div>
+        <div class="box-img-main">
+            <img class="img-profile" src="./img/istockphoto-1365436734-612x612.webp" alt="">
+        </div>
+           
+        
+            
+    </section>
+
+    <section class="categoria">
+        <h2>Experiências</h2>
+        <div class="categoria-experiencias">
+           
+            <a href="trabalho">
+                <img class="trabalho" src="./img/trabalho-em-equipe.jpg" />
+            </a>
+            <a href="ia">
+                <img class="ia" src="./img/inteligencia art.webp" />
+            </a>
+            <a href="equipe">
+                <img class="equipe" src="./img/equipe.jpg" />
+            </a>
+            <a href="ambiente">
+                <img class="ambiente" src="./img/ambiente de trabalho.jpeg" />
+            </a>
+        </div>
+
+        <!-- usa o swiper macaco -->
+
+    </section>
+
+    <section id="who-am-i" class="third-section">
+        <h2 class="title">Quem somos ?</h2>
+        <div>
+            <img class="img-who-am-i" src="img/LOGO_certo-removebg-preview.png" alt="imagem do matheus gomes">
+            <p>A <strong>Oasis</strong> surgiu como uma ideia de termos um <strong>Sistema</strong> que possa <strong>Ajudar</strong> as <strong>Assistentes Sociais</strong> de forma <strong>Segura</strong> e <strong>Ágil.</strong></p> 
+        </div>
+    </section>
+
+    <section id="my-projects" class="fourth-section">
+        <!-- Conteúdo da quarta seção -->
+    </section>
+</main>
+
+<footer id="contact">
+    <h2 class="title">contatos</h2>
+    <div>
+        <strong><p>GitHub :</p></strong>
+        <a href="https://github.com/MatheusGomes444?tab=repositories" title="Github" target="_blank">
+            <img src="img/github.svg" width="32" height="32" fill="#fff" alt="">
+        </a>
+    </div>
+</footer>
+<div class="wrapper">
+    <span class="icon-close" onclick="toggleModal()">
+        <ion-icon name="close"></ion-icon>
+    </span> 
+
+    <div class="caixa-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Lembre-me</label>
+                <a href="#">Esqueceu a Senha?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-registro">               
+                    <p>Não tem uma conta? <a href="#" class="registro-link">Registro</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="caixa-box registro">
+        <h2>Registro</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Concorda com os Termos e Condições</label>
+            </div>
+            <button type="submit" class="btn">Registro</button>
+            <div class="login-registro">
+                <p>Já tem uma conta? <a href="#" class="login-link">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+
+<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="js/script.js"></script>
+<script>
+   
