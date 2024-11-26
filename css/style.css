@@ -80,8 +80,8 @@ header{
     
     }
     .img-logo{
-    max-height: 10%;
-        max-width: 15px;
+    height: 10%;
+    width: 15px;
         
     }
     
@@ -188,9 +188,7 @@ header{
     
 
     }
-    img{
-        max-width: 5rem;
-    }
+   
     .img-profile{
   max-width: 30rem;
      height: 300px;
@@ -535,4 +533,41 @@ header{
 }
 .login-registro p a:hover{
     text-decoration: underline;
+}
+
+.categoria-experiencias {
+    display: flex;
+    gap: 10px;
+    height: 10%;
+    width: 10%;
+    justify-content: center;
+}
+
+.categoria {
+    padding-left: 46%;
+    margin-top: 50px;
+    background-color: #007566;
+}
+
+.trabalho{
+    width: 300px;
+    border-radius: 10%;
+}
+
+.ia{
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+.equipe{
+    width: 300px;
+    border-radius: 10%;
+    height: 200px;
+}
+
+.ambiente{
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
 }
