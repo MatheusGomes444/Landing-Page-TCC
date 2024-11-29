@@ -79,11 +79,11 @@ header{
     width: 1rem;
     
     }
-    .img-logo{
+ .logo{
+    width: 30px;
     height: 10%;
-    width: 15px;
-        
-    }
+    width: 5rem;
+ }
     
     nav{ /*Parte dos link/botões Experiências, Quem sou eu ?, Meus Projetos, Contato*/
     display: flex;
@@ -345,12 +345,6 @@ header{
     flex-wrap: wrap;
     
     }
-.logo{
-    font-size: 2em;
-    color: #fff;
-    user-select: none;
-
-}
 .navigation a {
 
     position: relative;
