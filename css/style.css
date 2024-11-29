@@ -73,6 +73,9 @@ header{
     min-height: 20px;
     
     }
+    .contatos{
+        color: #fff;
+    }
     .box-img-header{ /*Parte da logo*/
         
     height: 10%;
@@ -162,6 +165,7 @@ header{
     letter-spacing: 8px;
     
     }
+
     strong{
         color: rgb(0, 117, 102);;
     }
@@ -195,94 +199,74 @@ header{
        float: right;
        justify-content: flex-end;
     }
-    .second-section {
+
+    .carousel-container {
+        max-width: 70%;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        
+        
+      }
+      
+      .carousel img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      
+      .carousel-controls {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+      
+      .carousel-controls button {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      
+      .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      
+      .carousel-indicators button {
+        width: 15px !important;  /* Força o tamanho */
+        height: 15px !important; /* Força o tamanho */
+        background-color: #ddd;
+        border: none;
+        border-radius: 50%;
+        margin: 0 10px; /* Ajuste o espaço entre os botões se necessário */
+        padding: 0; /* Remove qualquer padding */
+        line-height: 0; /* Remove qualquer linha de altura */
+        cursor: pointer;
+    }
+      
+      .carousel-indicators button.active {
+        background-color: #60c659;
+      }
+      .second-section{
         background-color: #007566;
         display: flex;
         flex-direction: column;
         gap: 2rem;
         align-items: center;
         justify-content: center;
-        padding: 4rem;
-    }
- 
-
-    title{
-    
-    color: var(--dark5);
-    
-    
-    }
-    
-    .second-section div{
-    
-    
-        background-color: var(--dark2);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        
-        }
-    
-     .second-section p:hover{ /*Quando passar o mouse por cima acontece alguma coisa*/ 
-    
-    
-        color: var(--dark5);
-        transition: .4s;
-        cursor: default;
-     }@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-     .baba {
-         width: 80%;
-         margin: 20px auto;
-         height: 300px;
-     }
-     .carousel {
-         width: 100%;
-         height: 100%;
-         border: 1px solid red;
-         border-radius: 3px;
-         position: relative;
-     }
-     .slider {
-         width: 100%;
-         height: 100%;
-     }
-     .slider section {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         background: #ffffff;
-         opacity: 0;
-         z-index: 0;
-         transition: all 2s;
-     }
-     .slider section:nth-child(1) {
-         opacity: 1;
-         z-index: 1;
-     }
-     .right {
-         position: absolute;
-         top: 50%;
-         right: 10px;
-         z-index: 2;
-         cursor: pointer;
-         transform: translateY(-50%);
-     }
-     .left {
-         position: absolute;
-         top: 50%;
-         left: 10px;
-         z-index: 2;
-         cursor: pointer;
-         transform: translateY(-50%);
-     }
-
+      }
      
      .third-section{ /*Terceira seção da pagina/quem sou eu? e imagem */
     
@@ -308,7 +292,8 @@ header{
      }
      .third-section > div p{
     
-    max-width: 600px;
+    max-width: 800px;
+    font-size: 20px;
     color: var(--white);
     text-align: justify;
     
@@ -420,6 +405,7 @@ header{
     border-radius: 10px;
     width: 400px; /* Largura do modal */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+   
 }
 
 .icon-close {
@@ -527,41 +513,4 @@ header{
 }
 .login-registro p a:hover{
     text-decoration: underline;
-}
-
-.categoria-experiencias {
-    display: flex;
-    gap: 10px;
-    height: 10%;
-    width: 10%;
-    justify-content: center;
-}
-
-.categoria {
-    padding-left: 46%;
-    margin-top: 50px;
-    background-color: #007566;
-}
-
-.trabalho{
-    width: 300px;
-    border-radius: 10%;
-}
-
-.ia{
-    width: 300px;
-    height: 200px;
-    border-radius: 10%;
-}
-
-.equipe{
-    width: 300px;
-    border-radius: 10%;
-    height: 200px;
-}
-
-.ambiente{
-    width: 300px;
-    height: 200px;
-    border-radius: 10%;
 }
