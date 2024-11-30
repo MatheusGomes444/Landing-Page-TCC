@@ -165,9 +165,12 @@ header{
     letter-spacing: 8px;
     
     }
-
+    .first-section h1 strong{
+        font-size: 80px;
+    }
     strong{
         color: rgb(0, 117, 102);;
+        
     }
     strong1{
         color: var(--white);
@@ -176,9 +179,11 @@ header{
     color:var(--white);
     
     }
+
     .first-section button{
     
-    width: 200px;
+    width: 400px;
+    height: 40px;
     
     }
     .box-img-main{
@@ -193,15 +198,23 @@ header{
 
     }
    
-    .img-profile{
-  max-width: 30rem;
-     height: 300px;
-       float: right;
-       justify-content: flex-end;
-    }
+   .box-img-main {
+    position: relative; /* Necessário para posicionar a borda em relação à imagem */
+    display: inline-block; /* Para que a imagem não ocupe toda a largura */
+    opacity: 2;
+}
+
+.img-profile {
+    max-width: 70rem;
+    height: 600px;
+    float: right;
+    justify-content: flex-end;
+    border-radius: 15px; /* Bordas arredondadas */
+
+}
 
     .carousel-container {
-        max-width: 70%;
+        max-width: 100%;
         margin: auto;
         position: relative;
         overflow: hidden;
@@ -210,6 +223,7 @@ header{
       .carousel {
         display: flex;
         transition: transform 0.5s ease-in-out;
+        gap: 60px;
         
         
       }
@@ -217,6 +231,8 @@ header{
       .carousel img {
         width: 100%;
         border-radius: 10px;
+        max-height: 300px;
+    border-radius: 10px;
       }
       
       .carousel-controls {
@@ -293,9 +309,10 @@ header{
      .third-section > div p{
     
     max-width: 800px;
-    font-size: 20px;
+    font-size: 23px;
     color: var(--white);
     text-align: justify;
+
     
      }
     
@@ -314,6 +331,9 @@ header{
     
     
      }
+    footer > h2{
+        color: #fff;
+    }
     
     footer{ /*Parte de baixo/ contatos*/
     
