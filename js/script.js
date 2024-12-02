@@ -13,6 +13,67 @@ const indicators = document.querySelectorAll('.carousel-indicators button');
 let currentIndex = 0;
 let autoSlideInterval;
 
+function toggleModal() {
+    const loginBox = document.querySelector('.login');
+    const registerBox = document.querySelector('.registro');
+    loginBox.classList.toggle('active');
+    registerBox.classList.toggle('active');
+}
+
+async function handleLogin() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const response = await fetch('http://localhost:5134/api/Auth/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': '*/*'
+        },
+        body: JSON.stringify({
+            email: email,
+            password: password
+        })
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        console.log('Login bem-sucedido:', data);
+        // Aqui você pode armazenar o token e redirecionar o usuário
+    } else {
+        const errorData = await response.json();
+        console.error('Erro na requisição:', errorData.message);
+        // Aqui você pode mostrar uma mensagem de erro ao usuário
+    }
+}
+async function handleRegister(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('registerUsername').value;
+    const email = document.getElementById('registerEmail').value;
+    const password = document.getElementById('registerPassword').value;
+
+    const response = await fetch('http://localhost:5134/api/AuthController/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, email, password })
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Erro na requisição:', response.status, response.statusText, errorData.message);
+        alert(errorData.message); // Exibir mensagem de erro ao usuário
+        return;
+    }
+    
+    alert('Registro bem-sucedido! Você pode fazer login agora.'); // Mensagem de sucesso
+}
+
+  
+
+
 // Função para atualizar o carrossel
 function updateCarousel() {
     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;

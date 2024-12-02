@@ -40,11 +40,12 @@
 <section class="second-section">
         <div class="carousel-container">
             <div class="carousel" id="carousel">
-              <img src="img/ambiente de trabalho.jpeg" alt="Coleta seletiva">
-              <img src="img/inteligencia art.webp" alt="Cuidar ambiente">
-              <img src="img/equipe.jpg" alt="Lixo Zero">
-              <img src="img/trabalho-em-equipe.jpg" alt="Reciclagem">
-              <img src="img/rotina.jpg" alt="Descrição da imagem 5">
+                <img src="img/rotina.jpg" alt="">
+              <img src="img/img1.jpeg" alt="">
+              <img src="img/img2.jpeg" alt="">
+              <img src="img/img3.jpeg" alt="">
+              
+             
             </div>
       
             <div class="carousel-controls">
@@ -57,7 +58,7 @@
               <button data-slide="1"></button>
               <button data-slide="2"></button>
               <button data-slide="3"></button>
-              <button data-slide="4"></button>
+            
             </div>
           </div>
       
@@ -90,62 +91,68 @@
 </main>
 
 <div class="wrapper">
-    <span class="icon-close" onclick="toggleModal()">
-        <ion-icon name="close"></ion-icon>
-    </span> 
-
+    <!-- Tela de Login -->
     <div class="caixa-box login">
         <h2>Login</h2>
-        <form action="#">
+        <span class="icon-close" onclick="toggleModal()">
+            <ion-icon name="close"></ion-icon>
+        </span> 
+        <form id="loginForm" onsubmit="handleLogin(event)">
             <div class="input-box">
                 <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" required>
+                <input type="email" id="loginEmail" required>
                 <label>Email</label>
             </div>
             <div class="input-box">
                 <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="password" required>
+                <input type="password" id="loginPassword" required>
                 <label>Password</label>
             </div>
             <div class="remember-forgot">
-                <label><input type="checkbox"> Lembre-me</label>
+                <label><input type="checkbox" id="rememberMe"> Lembre-me</label>
                 <a href="#">Esqueceu a Senha?</a>
             </div>
             <button type="submit" class="btn">Login</button>
-            <div class="login-registro">               
-                    <p>Não tem uma conta? <a href="#" class="registro-link">Registro</a></p>
+            <div class="login-registro">
+                <p>Não tem uma conta? <a href="#" class="registro-link" onclick="toggleModal()">Registro</a></p>
             </div>
         </form>
     </div>
 
+    <!-- Tela de Registro -->
     <div class="caixa-box registro">
         <h2>Registro</h2>
-        <form action="#">
+        <span class="icon-close" onclick="toggleModal()">
+            <ion-icon name="close"></ion-icon>
+        </span> 
+        <form id="registerForm" onsubmit="handleRegister(event)">
             <div class="input-box">
                 <span class="icon"><ion-icon name="person"></ion-icon></span>
-                <input type="text" required>
+                <input type="text" id="registerUsername" required>
                 <label>Username</label>
             </div>
             <div class="input-box">
                 <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" required>
+                <input type="email" id="registerEmail" required>
                 <label>Email</label>
             </div>
             <div class="input-box">
                 <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="password" required>
+                <input type="password" id="registerPassword" required>
                 <label>Password</label>
             </div>
             <div class="remember-forgot">
-                <label><input type="checkbox"> Concorda com os Termos e Condições</label>
+                <label><input type="checkbox" id="termsAgreement"> Concorda com os Termos e Condições</label>
             </div>
-            <button type="submit" class="btn">Registro</button>
+            <button type="submit" class="btn">Registrar</button>
             <div class="login-registro">
-                <p>Já tem uma conta? <a href="#" class="login-link">Login</a></p>
+                <p>Já tem uma conta? <a href="#" class="login-link" onclick="toggleModal()">Login</a></p>
             </div>
         </form>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.0/dist/ionicons.js"></script>
 
 
 
