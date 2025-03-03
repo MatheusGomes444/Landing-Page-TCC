@@ -174,3 +174,17 @@ btnLoginpopup.addEventListener('click', () => {
 iconClose.addEventListener('click', () => {
     wrapper.classList.remove('active-popup');
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btnCadastro = document.getElementById("btnCadastro");
+    const wrapper = document.querySelector(".wrapper");
+
+    btnCadastro.addEventListener("click", function () {
+        wrapper.classList.add("active"); 
+    });
+
+    const closeModal = document.querySelector(".icon-close");
+    closeModal.addEventListener("click", function () {
+        wrapper.classList.remove("active");
+    });
+});
