@@ -20,11 +20,15 @@ function toggleModal() {
     registerBox.classList.toggle('active');
 }
 
-async function handleLogin() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
 
-    const response = await fetch('http://localhost:5134/api/Auth/login', {
+
+async function handleLogin(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    const response = await fetch('https://oasisapi.onrender.com/api/Auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -39,21 +43,30 @@ async function handleLogin() {
     if (response.ok) {
         const data = await response.json();
         console.log('Login bem-sucedido:', data);
-        // Aqui você pode armazenar o token e redirecionar o usuário
+
+        // Armazenar o token no localStorage ou sessionStorage
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('username', data.username); // Armazenar o nome de usuário
+    
+        // Redirecionar para a página inicial (ou outra página)
+        window.location.href = 'https://oasis-as.vercel.app';  // Exemplo de redirecionamento
     } else {
         const errorData = await response.json();
         console.error('Erro na requisição:', errorData.message);
-        // Aqui você pode mostrar uma mensagem de erro ao usuário
+        alert(errorData.message); // Exibir mensagem de erro ao usuário
     }
+    alert('Login bem-sucedido!'); // Mensagem de sucesso
 }
+
+
 async function handleRegister(event) {
-    event.preventDefault();
-    
+    event.preventDefault(); // Impedir que o formulário seja enviado normalmente
+
     const username = document.getElementById('registerUsername').value;
     const email = document.getElementById('registerEmail').value;
     const password = document.getElementById('registerPassword').value;
 
-    const response = await fetch('http://localhost:5134/api/AuthController/register', {
+    const response = await fetch('https://oasisapi.onrender.com/api/Auth/register', { // URL corrigida para 'Auth/register'
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -64,10 +77,10 @@ async function handleRegister(event) {
     if (!response.ok) {
         const errorData = await response.json();
         console.error('Erro na requisição:', response.status, response.statusText, errorData.message);
-        alert(errorData.message); // Exibir mensagem de erro ao usuário
+        alert(errorData.message); // Exibir a mensagem de erro
         return;
     }
-    
+    localStorage.setItem('username', username); 
     alert('Registro bem-sucedido! Você pode fazer login agora.'); // Mensagem de sucesso
 }
 
