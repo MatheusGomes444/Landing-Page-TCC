@@ -310,12 +310,10 @@ header{
     
     .third-section > div p {
         max-width: 800px;
-        font-size: 20px;
-        color: var(--white);
+        font-size: 24px;
+      
         text-align: justify;
-        line-height: 1.5;
-        word-break: break-word;
-        padding: 10px;
+        line-height: 1.3;
     }
     
     
